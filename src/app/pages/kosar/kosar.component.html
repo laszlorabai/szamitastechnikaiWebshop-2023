@@ -1,0 +1,15 @@
+<div class="main_component div-flex">
+    <mat-card class="div-flex" *ngFor="let kosart of tartalom | async">
+        <mat-card-content>
+            <table class="tartalom">
+                <tr>
+                    <th>Termékek:</th>
+                </tr>
+                <tr>
+                    <td>{{kosart.aru_nev}}</td>
+                </tr>
+            </table>
+            <button mat-raised-button color="primary" type="submit" (click)="rendelLead(kosart.id)" >Megrendel</button>
+        </mat-card-content>
+    </mat-card>
+</div>
